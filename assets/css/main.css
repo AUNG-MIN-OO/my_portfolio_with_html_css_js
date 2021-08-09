@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&family=Poppins:wght@300;400;600;800&family=Syncopate&display=swap');
+
+/*Variable css*/
+:root{
+    /*color*/
+    --first-color : #131313;
+    --second-color : #1f1f1f;
+    --card-color : #d1d8dd;
+    --text-color : #fff;
+    --input-color : #1a1919;
+    --hover-color : #d72323;
+    --background-linear : linear-gradient(320deg, #1c1c1f, #72757a);
+
+    /*fonts*/
+    --logo-font : "Syncopate", sans-serif;
+    --title-font : "Poppins SemiBold", sans-serif;
+    --text-font : 'Noto Sans JP', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--first-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4{
+    font-family: var(--title-font);
+    font-weight: 700;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*Reusable css*/
+section{
+    padding: 2rem 0 4rem;
+}
+.container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.section__title{
+    text-align: center;
+    color: var(--text-color);
+}
+
+/*Js class add*/
+.scroll-nav{
+    -webkit-box-shadow: 0 10px 6px -6px var(--second-color);
+    -moz-box-shadow: 0 10px 6px -6px var(--second-color);
+    box-shadow: 0 20px 16px -16px var(--second-color);
+}
+
+/*_________nav bar css___________*/
+header{
+    position: sticky;
+    z-index: 2001;
+    top: 0;
+    padding: 1rem 0.5rem;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: var(--second-color);*/
+}
+.nav__logo{
+    font-family: var(--logo-font);
+    font-size: 40px;
+    /*background-color: var(--second-color);*/
+    color: var(--text-color);
+    transition: 0.3s;
+}
+.nav__logo:hover{
+    color: var(--hover-color);
+}
+.nav__list{
+    display: flex;
+}
+.nav__items{
+    margin-right: 45px;
+}
+.nav__items a{
+    font-size: 20px;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+.nav__items a:hover{
+    color: var(--hover-color);
+}
+
+/*Home*/
+.home{
+    height: 90vh;
+    position: relative;
+}
+.social__list{
+    position: absolute;
+    bottom: 200px;
+    left: 100px;
+}
+.social__items{
+    font-size: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.social__items a{
+    color: var(--text-color);
+    transition: 0.3s;
+}
+.social__items a:hover{
+    color: var(--hover-color);
+}
+.home_text{
+    position: absolute;
+    bottom: 265px;
+    left: 200px;
+}
+.home-title{
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.home-subtitle{
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+.home_buttons{
+    margin-top: 20px;
+}
+.home__btn{
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    color: var(--text-color);
+    background-color: var(--second-color);
+    transition: 0.5s;
+}
+.home__btn:hover{
+    color: black;
+    background-color: var(--hover-color);
+}
+.home__logo{
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+}
+.home__img{
+    width: 600px;
+    height: 400px;
+    background-size: cover;
+}
+
+/*About*/
+.about{
+
+}
