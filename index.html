@@ -8,6 +8,7 @@
     <title>AUNG MIN OO</title>
     <link rel="stylesheet" href="assets/vendor/feather-icons-web/feather.css">
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -17,22 +18,22 @@
             <div class="nav__menu" id="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__items">
-                        <a href="#home">home</a>
+                        <a href="#">home</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#home">about</a>
+                        <a href="#about">about</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#home">portfolio</a>
+                        <a href="#portfolio">portfolio</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#home">education</a>
+                        <a href="#education">education</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#home">testimonials</a>
+                        <a href="#testimonials">testimonials</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#home">contact</a>
+                        <a href="#contact">contact</a>
                     </li>
                 </ul>
             </div>
@@ -75,39 +76,95 @@
                         </div>
                     </div>
                     <div class="home__logo">
-                        <img src="assets/img/logo_img.jpg" alt="" class="home__img">
+                        <img src="assets/img/logo_img.png" alt="" class="home__img">
                     </div>
                 </div>
             </div>
         </section>
         <section class="about" id="about">
-            <div class="about__body">
-                <h1 class="section__title">About me</h1>
-                <div class="underline"></div>
-                <div class="about__body container">
-                    <div class="about__text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur distinctio dolor dolore doloremque ex exercitationem, fugit itaque officia, perspiciatis quibusdam quis reiciendis, soluta. Aperiam corporis dicta distinctio quod voluptates!</p>
+            <div class="container-lg">
+                <div class="about__body">
+                    <h1 class="section__title">About me</h1>
+                    <div class="underline">
+                        <div class="underline__first"></div>
+                        <div class="underline__second"></div>
                     </div>
-                    <div class="about__details">
-                        <div class="personal__details">
-                            <h3>My Personal Details</h3>
-                            <table>
-                                <tr>
-                                    <td>Birthdate</td>
-                                    <td>August 1998</td>
-                                </tr>
-                                <tr>
-                                    <td>Phone</td>
-                                    <td>+818054414221</td>
-                                </tr>
-                            </table>
+                    <div class="about__body">
+                        <div class="about__text">
+                            <span class="about__name">Hello! I'm AUNG MIN OO.</span>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur distinctio dolor dolore doloremque ex exercitationem, fugit itaque officia, perspiciatis quibusdam quis reiciendis, soluta. Aperiam corporis dicta distinctio quod voluptates!</span>
                         </div>
-                        <div class="interests">
-                            <h3>My Interests</h3>
-                            <div class="interest__list">
-                                <div class="interest__item">
-                                    <i class="fas fa-gamepad"></i>
-                                    <span>Games</span>
+                        <div class="about__details">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="personal__details">
+                                        <span class="section__subtitle">My Personal Details</span>
+                                        <table style="width: 350px;height: 200px">
+                                            <tr>
+                                                <td class="table__title">Birthdate</td>
+                                                <td class="table__description">August 1998</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table__title">Phone</td>
+                                                <td class="table__description">+818054414221</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table__title">Email</td>
+                                                <td class="table__description">aungminoo1314@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table__title">Website</td>
+                                                <td class="table__description">https://learnwithme.life</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table__title">Address</td>
+                                                <td class="table__description">Tokyo , Japan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table__title">Job Status</td>
+                                                <td class="table__description">College Student (in Japan)</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="interests">
+                                        <span class="section__subtitle">My Interests</span>
+                                        <div class="interest__list">
+                                            <div class="interest__item">
+                                                <i class="fas fa-code"></i>
+                                                <br>
+                                                <span>Coding</span>
+                                            </div>
+                                            <div class="interest__item">
+                                                <i class="fas fa-gamepad"></i>
+                                                <br>
+                                                <span>Games</span>
+                                            </div>
+                                            <div class="interest__item">
+                                                <i class="fas fa-video"></i>
+                                                <br>
+                                                <span>Movies</span>
+                                            </div>
+                                        </div>
+                                        <div class="interest__list">
+                                            <div class="interest__item">
+                                                <i class="fab fa-youtube"></i>
+                                                <br>
+                                                <span>Youtube</span>
+                                            </div>
+                                            <div class="interest__item">
+                                                <i class="fas fa-book-open"></i>
+                                                <br>
+                                                <span>Reading</span>
+                                            </div>
+                                            <div class="interest__item">
+                                                <i class="fas fa-dumbbell"></i>
+                                                <br>
+                                                <span>Gym</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +172,9 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio" id="portfolio"></section>
+        <section class="portfolio" id="portfolio">
+            <div class="" style="height: 100vh"></div>
+        </section>
         <section class="education" id="education"></section>
         <section class="testimonials" id="testimonials"></section>
         <section class="contact" id="contact"></section>

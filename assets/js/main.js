@@ -31,7 +31,7 @@ typewriter
     .typeString('Future Ambition - 3 girlfriends')
     .pauseFor(300)
     .deleteChars(13)
-    .typeString('<strong style="color: red;">Full Stack</strong> Developer ')
+    .typeString('<strong style="color: #1CB698;">Full Stack</strong> Developer ')
     .pauseFor(1000)
     .start();
 
