@@ -38,10 +38,13 @@ ul{
 a{
     text-decoration: none;
 }
+a:hover{
+    color: var(--text-color);
+}
 
 /*Reusable css*/
 section{
-    padding: 7rem 0!important;
+    padding: 7rem 0 0 0!important;
 }
 .section__title{
     text-align: center;
@@ -76,6 +79,9 @@ section{
     width: 100px;
     background-color: var(--hover-color);
 }
+
+/*Scroll top*/
+
 
 /*Js class add*/
 .scroll-nav{
@@ -250,4 +256,79 @@ header{
 }
 .interest__item span{
     text-transform: uppercase;
+}
+
+/*Portfolio*/
+.portfolio{
+    height: 100vh;
+}
+.card{
+    background-color: var(--first-color)!important;
+}
+.portfolio__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio__img{
+    width: 450px;
+    height: 300px;
+    background-size: initial;
+    margin-right: 50px;
+}
+.portfolio__card-title{
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    display: block;
+    font-size: 20px;
+    color: white;
+}
+.tags{
+    margin-bottom: .5rem;
+}
+.tag{
+    padding: 0.3rem 0.5rem;
+    border-radius: 15px;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.portfolio__img{
+    width: 312px!important;
+    border-radius: .5rem;
+    justify-self: center;
+    align-items: center;
+}
+
+.portfolio__button{
+    padding: 1rem 1.5rem;
+    background-color: var(--hover-color);
+    border-radius: 10px;
+    color: white;
+}
+.button__icon{
+    transition: .5s;
+}
+.portfolio__button:hover .button__icon{
+    transform: translate(.5rem) !important;
+}
+
+.owl-nav{
+    text-align: center;
+}
+.owl-prev{
+    margin-right: 1.5rem;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    background: transparent;
+    font-size: 2rem;
+    color: var(--hover-color);
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--second-color);
 }
