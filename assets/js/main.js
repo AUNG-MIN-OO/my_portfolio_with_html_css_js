@@ -2,7 +2,7 @@
 
 function  scrollNav(){
     let header = document.getElementById('header');
-    console.log(header.classList)
+    // console.log(header.classList)
     if (this.scrollY >= 50){
         header.classList.add('scroll-nav');
     }else{
@@ -11,10 +11,17 @@ function  scrollNav(){
     }
 }
 window.addEventListener('scroll',scrollNav);
-// function scrollHeader(){
-//     if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
-// }
-// window.addEventListener('scroll', scrollHeader)
+
+// Scroll top button show
+const scrollTopBtn = document.getElementById("scroll__top");
+function showBtn(){
+    if (this.scrollY >= 300){
+        scrollTopBtn.classList.add('scroll__top-show');
+    }else{
+        scrollTopBtn.classList.remove('scroll__top-show');
+    }
+}
+window.addEventListener('scroll',showBtn);
 
 
 //typewriter css
