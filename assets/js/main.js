@@ -23,6 +23,24 @@ function showBtn(){
 }
 window.addEventListener('scroll',showBtn);
 
+//Skills toggle
+const skillContent = document.getElementsByClassName("skill__content"),
+      skillTitle = document.querySelectorAll('.skill__content-title');
+
+function showSkills(){
+    let className = this.parentNode.className;
+    for (let i = 0; i < skillContent.length; i++){
+        skillContent[i].className = "skill__content skill__hide";
+    }
+    if (className === "skill__content skill__hide"){
+        this.parentNode.className = "skill__content skill__show";
+    }
+}
+
+skillTitle.forEach((el)=>{
+    el.addEventListener('click',showSkills)
+})
+
 
 //typewriter css
 
@@ -52,7 +70,7 @@ const responsive  ={
         items:1
     },
     560:{
-        items: 2
+        items: 1
     },
     960:{
         items:1
@@ -63,11 +81,19 @@ $('.owl-carousel').owlCarousel({
     dots: false,
     loop:true,
     autoplay:true,
-    autoplayTimeout: 2000,
+    autoplayTimeout: 3000,
     nav: true,
     navText: [$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')],
     responsive: responsive
 });
+
+//counter up
+
+$('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
+
 
 
 
