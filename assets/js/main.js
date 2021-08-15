@@ -1,3 +1,16 @@
+//nav menu show hide
+
+$('.nav__menu-fontawesome-icon').click(function (){
+    $('.nav__menu').animate({top : "8vh"},500);
+    $('#nav__menu-icon').addClass('nav__menu-show-icon')
+    $('#nav__menu-hide-fontawesome').addClass('nav__menu-hide-icon')
+})
+$('#nav__menu-hide-fontawesome').click(function (){
+    $('.nav__menu').animate({top : "-90vh"},500);
+    $('#nav__menu-icon').removeClass('nav__menu-show-icon')
+    $('#nav__menu-hide-fontawesome').removeClass('nav__menu-hide-icon')
+})
+
 //nav bar scroll effect
 
 function  scrollNav(){
@@ -40,6 +53,27 @@ function showSkills(){
 skillTitle.forEach((el)=>{
     el.addEventListener('click',showSkills)
 })
+
+// nav link active
+
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop-102;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 
 
 //typewriter css
@@ -93,6 +127,12 @@ $('.counter').counterUp({
     delay: 10,
     time: 1000
 });
+
+//data aos
+
+AOS.init();
+
+
 
 
 
