@@ -25,6 +25,7 @@
 }
 body{
     background-color: var(--first-color);
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
@@ -42,6 +43,16 @@ a{
 a:hover{
     color: var(--text-color);
 }
+
+/*Dark Mode*/
+body.dark-theme{
+    --first-color : #f5f5f5;
+    --second-color : #fff;
+    --text-color : #252A2E;
+    --text-color-second : #252A2E70;
+    --hover-color : #1CB698;
+}
+
 
 /*Reusable css*/
 section{
@@ -112,6 +123,7 @@ header{
     z-index: 2000;
     top: 0;
     padding: 1rem 0.5rem;
+    margin-bottom: 2rem;
     background-color: var(--first-color);
 }
 .nav{
@@ -162,6 +174,7 @@ header{
 
 /*Home*/
 .home{
+    margin-top: 2rem;
     height: 85vh;
     position: relative;
     padding: 0!important;
@@ -272,7 +285,7 @@ header{
     width: 100px;
     height: 80px;
     text-align: center;
-    color: white;
+    color: var(--text-color);
     border: 1px solid var(--second-color);
     border-radius: 10px;
     cursor: pointer;
@@ -491,7 +504,7 @@ header{
     margin-bottom: .5rem;
     display: block;
     font-size: 20px;
-    color: white;
+    color: var(--text-color);
 }
 .tags{
     margin-bottom: .5rem;
@@ -548,26 +561,90 @@ header{
 .card{
     color: var(--text-color);
 }
-.card-title{
-    color: var(--text-color);
+.testimonial__card{
+    width: 90%;
+    height: auto;
+    background-color: var(--hover-color) !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem .3rem;
+    border-radius: 10px;
 }
-.card-title h4{
-    display: block;
+.testimonial__card-icon{
+    font-size: 50px;
+    margin-right: 2rem;
 }
-.stars{
-    color: var(--hover-color);
+.testimonial__dot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.teacher__review-show{
-    height: 150px;
-    background-color: var(--second-color);
+.testimonial__dot-first{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--hover-color);
+    margin: 10px 0;
 }
-.teacher__review-show span{
-    display: block;
-}
-[class*=" imghvr-"] figcaption, [class^=imghvr-] figcaption {
-    padding: 5px;
+.testimonial__dot-second{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
     background-color: var(--hover-color);
 }
+.testimonial__profile{
+    text-align: center;
+}
+.testimonial__profile-image{
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    border: 5px solid var(--hover-color);
+}
+.testimonial__profile-name{
+    margin-top: 15px;
+    color: var(--text-color);
+    text-align: center;
+}
+.testimonial__profile-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.testimonial__profile-desc{
+    color: var(--text-color-second);
+}
+.owl-carousel .owl-item img{
+    display: inline;
+    width: 70px;
+}
+.testimonial__slider{
+    max-width: 1280px;
+    margin: 15px auto;
+    padding: 20px 0;
+}
+.slick-slide{
+    margin: 35px;
+    opacity: .3;
+    transition: all 300ms ease;
+}
+.slick-slide img{
+    display: inline;
+}
+.slick-dots li button::before {
+    font-size: 10px;
+}
+.slick-dots li.slick-active button:before{
+    color: var(--hover-color);
+}
+.slick-current{
+    opacity: 1;
+    transform: scale(1.2);
+}
+.slick-current
 
 /*Contact*/
 .contact__card{
@@ -586,6 +663,9 @@ header{
     text-align: center;
 }
 .btn:hover{
+    color: var(--text-color);
+}
+.form__name{
     color: var(--text-color);
 }
 .form__button{
@@ -638,39 +718,6 @@ footer{
 }
 
 /* Media Queries */
-
-/*  Mobile First Approach - Smaller to Bigger Screen Size */
-
-/* Small devices -sm- (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-}
-
-/* Medium devices -md- (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
-
-/* Large devices -lg- (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
-
-/* Extra large devices -xl- (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
-
-
-
-/* Desktop First Approach - Bigger to Smaller Screen Size */
-
-/* Extra small devices (portrait phones, less than 576px) */
-
-/* Small devices (landscape phones, less than 768px) */
-
-
-
 @media only screen and (max-width: 1024px) {
     .nav__items {
         margin-left: 20px!important;
@@ -714,47 +761,61 @@ footer{
     .nav__list {
         margin-bottom: 0;
     }
-    .testimonial__card{
-        width: 80% !important;
-    }
     .contact__card{
         width: auto;
     }
     .contact__form{
         width: 100%;
     }
+    .testimonial__card{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonial__card-icon{
+        margin-right: 0;
+    }
 }
 
 /*Medium devices (tablets, less than 992px)*/
-/*@media screen and (max-width: 992px) {*/
-/*    .home__img{*/
-/*        width: 400px;*/
-/*        height: 400px;*/
-/*    }*/
-/*    .nav__menu{*/
-/*        width: 100%;*/
-/*        position: absolute;*/
-/*        height: 330px;*/
-/*        top: -90vh;*/
-/*        right: 0;*/
-/*        background-color: var(--second-color);*/
-/*    }*/
-/*    .nav__list{*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        justify-content: center;*/
-/*        align-items: center;*/
-/*        padding: 20px 0;*/
-/*    }*/
-/*    .nav__items{*/
-/*        margin-right: 0;*/
-/*        margin-bottom: 20px;*/
-/*        text-transform: uppercase;*/
-/*    }*/
-/*    .nav__menu-show{*/
-/*        top: 13vh;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 992px) {
+    .home__img{
+        width: 400px;
+        height: 400px;
+    }
+    .nav__menu{
+        width: 100%;
+        position: absolute;
+        height: 330px;
+        top: -90vh;
+        right: 0;
+        background-color: var(--second-color);
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .nav__items{
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    .nav__menu-show{
+        top: 13vh;
+    }
+    .social__list{
+        bottom: 30px;
+    }
+    .home_text{
+        bottom: 130px;
+    }
+    .slick-slide{
+        margin-right: 0;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .nav__logo{
@@ -811,7 +872,13 @@ footer{
         height: 250px;
     }
     .testimonial__card{
-        width: 80% !important;
+        flex-direction: row;
+        width: 80%;
+        padding: 1.5rem 1rem;
+        text-align: start;
+    }
+    .testimonial__card-icon{
+        margin-right: 1.5rem;
     }
 }
 
@@ -895,21 +962,14 @@ footer{
         height: 60vh;
         margin-bottom: 20px;
     }
-    .testimonial__container{
-        width: 100%;
-        margin: auto;
-    }
-    .testimonial__card{
-        width: 80% !important;
-        margin: 10px auto!important;
-        float: none!important;
-        /*margin: auto!important;*/
-    }
     .contact__card{
         margin-bottom: 10px;
     }
     .scroll__top-icon{
         font-size: 35px;
+    }
+    .slick-slide{
+        margin: 35px 0;
     }
 }
 
@@ -1002,21 +1062,17 @@ footer{
         height: 60vh;
         margin-bottom: 20px;
     }
-    .testimonial__container{
-        width: 100%;
-        margin: auto;
-    }
-    .testimonial__card{
-        width: 80% !important;
-        margin: 10px auto!important;
-        float: none!important;
-        /*margin: auto!important;*/
-    }
     .contact__card{
         margin-bottom: 10px;
     }
     .scroll__top-icon{
         font-size: 35px;
+    }
+    .testimonial__card{
+        padding: .5rem .3rem;
+    }
+    .slick-slide{
+        margin: 35px 0px 8px 0px;
     }
 }
 
@@ -1085,6 +1141,24 @@ footer{
     }
     .portfolio__img{
         height: 180px;
+    }
+    .testimonial__card{
+        flex-direction: column;
+    }
+    .testimonial__card-icon{
+        margin-right: 0;
+        font-size: 20px;
+    }
+    .testimonial__card-title{
+        font-size: 13px;
+    }
+    .testimonial__profile-image{
+        width: 40px;
+        height: 40px;
+        border: 3px solid var(--hover-color);
+    }
+    .slick-slide{
+        margin: 35px 0px 25px 0px;
     }
 }
 

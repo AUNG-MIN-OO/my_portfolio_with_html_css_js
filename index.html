@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/vendor/image_hover/css/imagehover.min.css">
     <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendor/data_aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick-theme.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -23,22 +25,22 @@
             <div class="nav__menu" id="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__items">
-                        <a href="#home">home</a>
+                        <a class="nav__link active-link" href="#">home</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#about">about</a>
+                        <a class="nav__link" href="#about">about</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#qualification">qualification</a>
+                        <a class="nav__link" href="#qualification">qualification</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#projects">projects</a>
+                        <a class="nav__link" href="#projects">projects</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#testimonials">testimonials</a>
+                        <a class="nav__link" href="#testimonials">testimonials</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#contact">contact</a>
+                        <a class="nav__link" href="#contact">contact</a>
                     </li>
                 </ul>
             </div>
@@ -388,7 +390,7 @@
                                         <div class="" data-aos="fade-up">
                                             <div class="education__year">
                                                 <i class="fas fa-calendar-alt education__year-icon"></i>
-                                                <span>2018 - 2022</span>
+                                                <span>2018 - 2020</span>
                                             </div>
                                             <div class="education__data">
                                                 <h3 class="education__title mb-2">Japanese Language School (Tokyo, Japan)</h3>
@@ -438,7 +440,7 @@
                     <div class="portfolio__body">
                         <div class="project__cards">
                             <div class="row">
-                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-right">
+                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-right" data-aos-duration="1000">
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="project__card">
@@ -453,7 +455,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-right">
+                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-right" data-aos-duration="1000">
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="project__card">
@@ -468,7 +470,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-left">
+                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-left" data-aos-duration="1000">
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="project__card">
@@ -483,7 +485,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-left">
+                                <div class="col-12 col-md-6 col-lg-3 mb-md-4 project__card-column" data-aos="flip-left" data-aos-duration="1000">
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="project__card">
@@ -504,7 +506,7 @@
                             Most <span>Recent</span> Projects
                         </div>
                         <div class="portfolio__container">
-                            <div class="owl-carousel">
+                            <div class="owl-carousel owl-carousel-portfolio">
                                 <div class="portfolio__content">
                                     <img src="assets/img/helper.jpg" class="portfolio__img" alt="">
                                     <div class="portfolio__data">
@@ -630,59 +632,87 @@
                 </div>
                 <div class="testimonial__body">
                     <div class="row">
-                        <div class="col-md-6 testimonial__container">
-                            <div class="card w-50 p-2 text-center me-5 float-end testimonial__card" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <!--                                    <img src="#" alt="">-->
-                                    <h4 class="card-title">Ga Tone</h4>
-                                </div>
-                                <span>(Teacher)</span>
-                                <span class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                                <hr>
-                                <div class="teacher__review imghvr-zoom-out">
-                                    <div class="teacher__review-show p-5">
-                                        <i class="fas fa-fingerprint review__icon"></i>
-                                        <span>Touch here</span>
+                        <div class="col-12 testimonial__container">
+                            <div class="testimonial__slider">
+                                <div>
+                                    <div class="testimonial__card card m-auto">
+                                        <div>
+                                            <i class="feather-rss testimonial__card-icon"></i>
+                                        </div>
+                                        <span class="testimonial__card-title">He is clever student who can learn languages in short time.</span>
                                     </div>
-                                    <figcaption>
-                                        <p class="overflow-scroll">
-                                            <i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim exercitationem harum ipsum laudantium repudiandae sequi. Architecto </i>
-                                        </p>
-                                    </figcaption>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 testimonial__container">
-                            <div class="card w-50 p-2 text-center ms-5 testimonial__card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                                <div class="d-flex justify-content-center align-items-center">
-<!--                                    <img src="#" alt="">-->
-                                    <h4 class="card-title">Japn Ga Tone</h4>
-                                </div>
-                                <span>(Teacher)</span>
-                                <span class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                                <hr>
-                                <div class="teacher__review imghvr-zoom-out">
-                                    <div class="teacher__review-show p-5">
-                                        <i class="fas fa-fingerprint review__icon"></i>
-                                        <span>Touch here</span>
+                                    <div class="testimonial__dot">
+                                        <div class="testimonial__dot-first"></div>
+                                        <div class="testimonial__dot-second"></div>
                                     </div>
-                                    <figcaption>
-                                        <p class="overflow-scroll">
-                                            <i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim exercitationem harum ipsum laudantium repudiandae sequi. Architecto </i>
-                                        </p>
-                                    </figcaption>
+                                    <div class="testimonial__profile">
+                                        <img src="assets/img/ga-tone.jpeg" class="testimonial__profile-image" alt="">
+                                    </div>
+                                    <div class="testimonial__profile-name">
+                                        <span class="testimonial__profile-title">Japan Ga tone</span>
+                                        <br>
+                                        <span class="testimonial__profile-desc">Japan Min Thar</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="testimonial__card card m-auto">
+                                        <div>
+                                            <i class="feather-rss testimonial__card-icon"></i>
+                                        </div>
+                                        <span class="testimonial__card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate debitis dolor</span>
+                                    </div>
+                                    <div class="testimonial__dot">
+                                        <div class="testimonial__dot-first"></div>
+                                        <div class="testimonial__dot-second"></div>
+                                    </div>
+                                    <div class="testimonial__profile">
+                                        <img src="assets/img/portfolio1.jpg" class="testimonial__profile-image" alt="">
+                                    </div>
+                                    <div class="testimonial__profile-name">
+                                        <span class="testimonial__profile-title">Japan Ga tone</span>
+                                        <br>
+                                        <span class="testimonial__profile-desc">Japan Min Thar</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="testimonial__card card m-auto">
+                                        <div>
+                                            <i class="feather-rss testimonial__card-icon"></i>
+                                        </div>
+                                        <span class="testimonial__card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate debitis dolor</span>
+                                    </div>
+                                    <div class="testimonial__dot">
+                                        <div class="testimonial__dot-first"></div>
+                                        <div class="testimonial__dot-second"></div>
+                                    </div>
+                                    <div class="testimonial__profile">
+                                        <img src="assets/img/portfolio1.jpg" class="testimonial__profile-image" alt="">
+                                    </div>
+                                    <div class="testimonial__profile-name">
+                                        <span class="testimonial__profile-title">Japan Ga tone</span>
+                                        <br>
+                                        <span class="testimonial__profile-desc">Japan Min Thar</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="testimonial__card card m-auto">
+                                        <div>
+                                            <i class="feather-rss testimonial__card-icon"></i>
+                                        </div>
+                                        <span class="testimonial__card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate debitis dolor</span>
+                                    </div>
+                                    <div class="testimonial__dot">
+                                        <div class="testimonial__dot-first"></div>
+                                        <div class="testimonial__dot-second"></div>
+                                    </div>
+                                    <div class="testimonial__profile">
+                                        <img src="assets/img/portfolio1.jpg" class="testimonial__profile-image" alt="">
+                                    </div>
+                                    <div class="testimonial__profile-name">
+                                        <span class="testimonial__profile-title">Japan Ga tone</span>
+                                        <br>
+                                        <span class="testimonial__profile-desc">Japan Min Thar</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -738,11 +768,11 @@
                             <h4 class="form__title">Send Message</h4>
                             <form action="#">
                                 <div class="mb-4">
-                                    <label for="name" class="form-label text-white">Name</label>
+                                    <label for="name" class="form-label form__name">Name</label>
                                     <input type="email" class="form-control" id="name" placeholder="Mr Pro">
                                 </div>
                                 <div class="mb-4">
-                                    <label for="content" class="form-label text-white">Content</label>
+                                    <label for="content" class="form-label form__name">Content</label>
                                     <textarea class="form-control" id="content" rows="3"></textarea>
                                 </div>
                                 <button class="btn btn-lg form__button">Send <i class="fab fa-telegram-plane form__button-icon"></i></button>
@@ -757,6 +787,10 @@
         <div class="footer">
             <div class="footer__container">
                 <h4 class="footer__title">AUNG MIN OO</h4>
+                <div class="nav__btns">
+                    <!--                    Theme change button-->
+                    <i class="feather-moon change-theme" id="theme-button"></i>
+                </div>
                 <span>Web Developer</span>
                 <div class="footer__socials">
                     <a href="#"><i class="feather-facebook footer__social-icon"></i></a>
@@ -770,16 +804,18 @@
             </div>
         </div>
     </footer>
-    <a href="#" class="scroll__top" id="scroll__top">
+    <a href="" class="scroll__top" id="scroll__top"  data-aos="fade-up">
         <i class="fas fa-hand-point-up scroll__top-icon"></i>
     </a>
 
-<script src="assets/vendor/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="assets/vendor/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+<script type="text/javascript" src="assets/vendor/slick/slick.min.js"></script>
 <script src="assets/vendor/way_point/jquery.waypoints.min.js"></script>
 <script src="assets/vendor/counter_up/counter_up.js"></script>
 <script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
 <script src="assets/vendor/data_aos/aos.js"></script>
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

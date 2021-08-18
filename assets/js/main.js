@@ -10,6 +10,11 @@ $('#nav__menu-hide-fontawesome').click(function (){
     $('#nav__menu-icon').removeClass('nav__menu-show-icon')
     $('#nav__menu-hide-fontawesome').removeClass('nav__menu-hide-icon')
 })
+$('.nav__link').click(function (){
+    $('.nav__menu').animate({top : "-90vh"},500);
+    $('#nav__menu-icon').removeClass('nav__menu-show-icon')
+    $('#nav__menu-hide-fontawesome').removeClass('nav__menu-hide-icon')
+})
 
 //nav bar scroll effect
 
@@ -36,6 +41,18 @@ function showBtn(){
 }
 window.addEventListener('scroll',showBtn);
 
+//click to scroll top
+$(document).ready(function (){
+    $('#scroll__top').click(function (e){
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop : 0,
+            scrollBehavior : "smooth",
+        },500)
+        return false;
+    })
+})
+
 //Skills toggle
 const skillContent = document.getElementsByClassName("skill__content"),
       skillTitle = document.querySelectorAll('.skill__content-title');
@@ -55,26 +72,46 @@ skillTitle.forEach((el)=>{
 })
 
 // nav link active
-
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive(){
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop-102;
-        sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
+let navLinks = document.querySelectorAll(".nav__link");
+for (let i = 0; i < navLinks.length; i++) {
+    console.log(navLinks[i])
+    navLinks[i].addEventListener("click", function() {
+        let current = document.getElementsByClassName("active-link");
+        console.log(current[0].className);
+        current[0].className = current[0].className.replace(" active-link","");
+        this.className += " active-link";
+    });
 }
-window.addEventListener('scroll', scrollActive)
 
+// Dark Theme
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'feather-sun'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'feather-moon' : 'feather-sun'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
 //typewriter css
 
@@ -111,7 +148,7 @@ const responsive  ={
     },
 }
 
-$('.owl-carousel').owlCarousel({
+$('.owl-carousel-portfolio').owlCarousel({
     dots: false,
     loop:true,
     autoplay:true,
@@ -120,6 +157,39 @@ $('.owl-carousel').owlCarousel({
     navText: [$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')],
     responsive: responsive
 });
+
+//slick slider
+
+$('.testimonial__slider').slick({
+    centerMode: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    dots: true,
+    slidesToShow: 3,
+    responsive: [
+        {
+            breakpoint: 769,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
+
 
 //counter up
 
